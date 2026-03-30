@@ -75,6 +75,15 @@ img { max-width: 100%; display: block; }
   color: var(--white);
 }
 
+.nav-logo-img {
+  height: 40px;
+  width: auto;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+  filter: brightness(0) invert(1);
+}
+
 .nav-links {
   display: flex;
   gap: 32px;
@@ -596,11 +605,11 @@ section {
 .price-card.featured::before {
   content: 'MOST POPULAR';
   position: absolute;
-  top: 32px;
-  right: -35px;
+  top: 28px;
+  right: -45px;
   background: var(--gold);
   color: var(--black);
-  padding: 8px 50px;
+  padding: 8px 70px;
   font-size: 0.75rem;
   font-weight: 800;
   letter-spacing: 2px;
