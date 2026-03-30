@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book a Call | TG Coaching</title>
+  <meta name="description" content="Book a free, no-pressure call with Tom to discuss your fitness goals and find the right coaching plan for you.">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💪</text></svg>">
+  <style>
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 60px 40px;
+    }
+    .form-success .success-icon {
+      width: 80px;
+      height: 80px;
+      background: var(--gold);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      font-size: 2.5rem;
+    }
+    .form-success h3 {
+      font-family: var(--font-heading);
+      font-size: 2rem;
+      letter-spacing: 2px;
+      margin-bottom: 12px;
+    }
+    .form-success p {
+      color: var(--gray);
+      line-height: 1.7;
+    }
+    .urgency-banner {
+      background: var(--gold);
+      color: var(--black);
+      text-align: center;
+      padding: 12px 24px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      letter-spacing: 1px;
+      margin-top: 72px;
+    }
+    .urgency-banner span {
+      font-weight: 400;
+    }
+    .benefit-cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .benefit-card {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      padding: 24px;
+      text-align: center;
+    }
+    .benefit-card .b-icon {
+      font-size: 2rem;
+      margin-bottom: 12px;
+    }
+    .benefit-card h4 {
+      font-family: var(--font-heading);
+      font-size: 1.2rem;
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    .benefit-card p {
+      color: var(--gray);
+      font-size: 0.85rem;
+      line-height: 1.6;
+    }
+    @media (max-width: 768px) {
+      .benefit-cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav scrolled" id="nav">
+    <div class="container">
+      <a href="index.html" class="nav-logo">TG <span>COACHING</span></a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="index.html#about">About</a></li>
+        <li><a href="index.html#method">Method</a></li>
+        <li><a href="pricing.html">Pricing</a></li>
+        <li><a href="index.html#testimonials">Results</a></li>
+        <li><a href="contact.html" class="nav-cta active">Book a Call</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </nav>
+
+  <!-- URGENCY BANNER -->
+  <div class="urgency-banner">
+    LIMITED SPOTS AVAILABLE — <span>Tom only takes on a limited number of clients to ensure quality coaching</span>
+  </div>
+
+  <!-- CONTACT -->
+  <section class="contact-hero">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="section-label">Let's Talk</div>
+          <h2>BOOK YOUR <span>FREE CALL</span></h2>
+          <p>This is a free, no-pressure chat about your goals, your schedule, and whether The TG Method is the right fit for you. No sales pitch — just an honest conversation.</p>
+
+          <div class="contact-details">
+            <div class="contact-detail">
+              <div class="detail-icon">📞</div>
+              <div class="detail-text">
+                <div class="label">Duration</div>
+                <div class="value">15–20 min free call</div>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="detail-icon">📧</div>
+              <div class="detail-text">
+                <div class="label">Email</div>
+                <div class="value">hello@tgcoaching.com</div>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="detail-icon">📍</div>
+              <div class="detail-text">
+                <div class="label">Coaching</div>
+                <div class="value">100% Online — Train Anywhere</div>
+              </div>
+            </div>
+            <div class="contact-detail">
+              <div class="detail-icon">📱</div>
+              <div class="detail-text">
+                <div class="label">Social</div>
+                <div class="value">@tgcoaching</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="benefit-cards">
+            <div class="benefit-card">
+              <div class="b-icon">🎯</div>
+              <h4>GOAL FOCUSED</h4>
+              <p>We'll map out exactly what you want to achieve</p>
+            </div>
+            <div class="benefit-card">
+              <div class="b-icon">🤝</div>
+              <h4>NO PRESSURE</h4>
+              <p>Honest chat — no hard sell, no obligation</p>
+            </div>
+            <div class="benefit-card">
+              <div class="b-icon">⚡</div>
+              <h4>QUICK START</h4>
+              <p>You can be training within 48 hours of signing up</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-card">
+          <div id="formContainer">
+            <h3 style="font-family: var(--font-heading); font-size: 1.8rem; letter-spacing: 2px; margin-bottom: 8px;">GET IN TOUCH</h3>
+            <p style="color: var(--gray); font-size: 0.9rem; margin-bottom: 32px;">Fill in your details and I'll be in touch within 24 hours to arrange your call.</p>
+            <form id="contactForm" onsubmit="handleSubmit(event)">
+              <div class="form-group">
+                <label for="name">Full Name *</label>
+                <input type="text" id="name" name="name" placeholder="Your name" required>
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address *</label>
+                <input type="email" id="email" name="email" placeholder="you@email.com" required>
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="+44 7XXX XXX XXX">
+              </div>
+              <div class="form-group">
+                <label for="plan">Interested In</label>
+                <select id="plan" name="plan">
+                  <option value="">Not sure yet — let's chat</option>
+                  <option value="lite">Bespoke Lite — £135/month</option>
+                  <option value="bespoke">Fully Bespoke — £185/month</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="experience">Training Experience</label>
+                <select id="experience" name="experience">
+                  <option value="">Select your level</option>
+                  <option value="beginner">Beginner — New to training</option>
+                  <option value="intermediate">Intermediate — Training 1-2 years</option>
+                  <option value="advanced">Advanced — Training 3+ years</option>
+                  <option value="crossfit">CrossFit / Class-based training</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="goals">Your Goals</label>
+                <textarea id="goals" name="goals" placeholder="Tell me a bit about what you want to achieve..."></textarea>
+              </div>
+              <button type="submit" class="btn btn-gold" style="width: 100; font-size: 1rem;">Book My Free Call →</button>
+              <p style="color: var(--gray); font-size: 0.8rem; text-align: center; margin-top: 16px;">No commitment. No sales pitch. Just a chat about your goals.</p>
+            </form>
+          </div>
+          <div class="form-success" id="formSuccess">
+            <div class="success-icon">✓</div>
+            <h3>YOU'RE IN!</h3>
+            <p>Thanks for reaching out! I'll be in touch within 24 hours to arrange your free call. In the meantime, give me a follow on social for training tips and content.</p>
+            <div style="margin-top: 24px;">
+              <a href="index.html" class="btn btn-outline" style="padding: 12px 28px; font-size: 0.85rem;">Back to Home</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TRUST SECTION -->
+  <section style="background: var(--teal); padding: 60px 0; text-align: center;">
+    <div class="container">
+      <h2 style="font-family: var(--font-heading); font-size: 2.5rem; letter-spacing: 2px; margin-bottom: 12px;">STILL ON THE FENCE?</h2>
+      <p style="color: rgba(255,255,255,0.8); max-width: 600px; margin: 0 auto 32px; line-height: 1.7;">The call is free. It's a no-pressure chat. The worst that can happen is you walk away with some solid advice about your training — for free.</p>
+      <a href="#" onclick="document.querySelector('.contact-form-card').scrollIntoView({behavior:'smooth'}); return false;" class="btn btn-gold">Fill in the Form Above</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">TG <span>COACHING</span></a>
+          <p>Personalised coaching for busy people. Real training that fits around real life.</p>
+        </div>
+        <div class="footer-col">
+          <h4>QUICK LINKS</h4>
+          <a href="index.html">Home</a>
+          <a href="index.html#about">About Tom</a>
+          <a href="index.html#method">The TG Method</a>
+          <a href="pricing.html">Pricing</a>
+        </div>
+        <div class="footer-col">
+          <h4>PLANS</h4>
+          <a href="pricing.html">Bespoke Lite</a>
+          <a href="pricing.html">Fully Bespoke</a>
+          <a href="pricing.html#faq">FAQs</a>
+        </div>
+        <div class="footer-col">
+          <h4>GET IN TOUCH</h4>
+          <a href="contact.html">Book a Call</a>
+          <a href="mailto:hello@tgcoaching.com">hello@tgcoaching.com</a>
+          <a href="#">@tgcoaching</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 TG Coaching. All rights reserved.</p>
+        <div class="social-links">
+          <a href="#" aria-label="Instagram">IG</a>
+          <a href="#" aria-label="TikTok">TK</a>
+          <a href="#" aria-label="Facebook">FB</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Navbar scroll
+    window.addEventListener('scroll', () => {
+      document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    // Mobile menu
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('active');
+    }
+
+    document.querySelectorAll('.nav-links a').forEach(link => {
+      link.addEventListener('click', () => document.getElementById('navLinks').classList.remove('active'));
+    });
+
+    // Pre-select plan from URL param
+    const params = new URLSearchParams(window.location.search);
+    const planParam = params.get('plan');
+    if (planParam) {
+      const select = document.getElementById('plan');
+      if (select) select.value = planParam;
+    }
+
+    // Form submission
+    function handleSubmit(e) {
+      e.preventDefault();
+      document.getElementById('formContainer').style.display = 'none';
+      document.getElementById('formSuccess').style.display = 'block';
+      document.querySelector('.contact-form-card').scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Fade in
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
